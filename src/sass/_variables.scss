@@ -1,24 +1,29 @@
 // fonts //
 
 @font-face {
-    font-family: rowdies-regular;
-    src: url(../fonts/Rowdies-Regular.ttf);
+  font-family: rowdies-regular;
+  src: url(../fonts/Rowdies-Regular.ttf);
 }
 @font-face {
-    font-family: rowdies-bold;
-    src: url(../fonts/Rowdies-Bold.ttf);
-    font-weight: bold;
+  font-family: rowdies-bold;
+  src: url(../fonts/Rowdies-Bold.ttf);
+  font-weight: bold;
 }
 @font-face {
-    font-family: montserrat-regular;
-    src: url(../fonts/Montserrat-Regular.ttf);
+  font-family: montserrat-regular;
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 @font-face {
-    font-family: montserrat-bold;
-    src: url(../fonts/Montserrat-Bold.ttf);
-    font-weight: bold;
+  font-family: montserrat-bold;
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: LuckiestGuy-regular;
+  src: url(../fonts/LuckiestGuy-Regular.ttf);
 }
 
 /* Colors */
 
 $primary-color1: #64c4c0;
+$primary-color2: #4c9793;

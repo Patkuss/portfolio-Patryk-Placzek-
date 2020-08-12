@@ -1,0 +1,130 @@
+@mixin moveAndFadeAnimation($distance, $duration, $delay) {
+  animation: move-and-fade $duration linear infinite;
+  animation-delay: $delay;
+  @keyframes move-and-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-$distance);
+      opacity: 0;
+    }
+  }
+}
+
+.homeArea {
+  height: 100vh;
+  width: 100%;
+  background-color: $primary-color1;
+  .home-content {
+    padding: 0;
+    margin-left: 11%;
+    position: absolute;
+    top: 20vh;
+    h1 {
+      font-size: 65px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+      text-shadow: 0 10px 30px white;
+      font-family: LuckiestGuy-regular;
+      span {
+        padding-left: 50px;
+      }
+    }
+    p {
+      text-align: center;
+      border-top: 2px solid white;
+      font-size: 30px;
+    }
+  }
+  .image-wrapper {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .homeBackground {
+      width: 80%;
+      height: auto;
+      margin-right:0;
+      margin-left: auto;
+      display: block;
+    }
+    .LClock {
+      width: 4.47917%;
+      height: auto;
+      position: absolute;
+      top: 7.8%;
+      right: 35.129%;
+    }
+    .SClock {
+      width: 4.47917%;
+      height: auto;
+      position: absolute;
+      top: 7.8%;
+      right: 35.129%;
+    }
+    .yoda {
+      cursor: pointer;
+      height: 7vw;
+      width: 7%;
+      position: absolute;
+      top: 20.9%;
+      right: 12.8%;
+      .arm {
+        position: absolute;
+        width: 1.30208vw;
+        height: auto;
+        top: 48%;
+        left: 57%;
+      }
+    }
+    .mouse {
+      width: 3.64584%;
+      height: auto;
+      position: absolute;
+      top: 79.58%;
+      right: 35.5%;
+    }
+    .steam-container {
+      width: 3.125%;
+      height: 5.81395;
+      position: absolute;
+      top: 67%;
+      right: 9%;
+      .squiggle-container {
+        width: 16.6666%;
+        height: 100%;
+        display: inline-block;
+      }
+      .squiggle-container-2 {
+         transform: translateY(0px);
+        .squiggle {
+          @include moveAndFadeAnimation(20px, 2.5s, 0s);
+          width: 100%;
+        }
+      }
+      .squiggle-container-3 {
+         transform: translateY(15px);
+        .squiggle {
+          @include moveAndFadeAnimation(15px, 2.5s, .4s);
+          width: 100%;
+        }
+      }
+    }
+    .gif {
+      width: 40.49625%;
+      height: auto;
+      position: absolute;
+      top: 47.38%;
+      right: 17.0%;
+    }
+  }
+}
