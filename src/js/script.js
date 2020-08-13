@@ -1,32 +1,78 @@
 // scroll snapping //
 
-gsap.registerPlugin(ScrollTrigger);
+(function($) {
+  var selector = ".section";
 
-function goToSection(i, anim) {
-  gsap.to(window, {
-    scrollTo: {y: i*innerHeight, autoKill: false},
-    duration: 1
-  });
+  var $slides = $(selector);
 
-  if(anim) {
-    anim.restart();
-  }
-}
+  var currentSlide = 0;
+  var isAnimating = false;
 
-gsap.utils.toArray(".panel").forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    onEnter: () => goToSection(i)
-  });
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "bottom bottom",
-    onEnterBack: () => goToSection(i),
-  });
-});
+  var stopAnimation = function() {
+    setTimeout(function() {
+      isAnimating = false;
+    }, 300);
+  };
 
+  var bottomIsReached = function($elem) {
+    var rect = $elem[0].getBoundingClientRect();
+    return rect.bottom <= $(window).height();
+  };
 
+  var topIsReached = function($elem) {
+    var rect = $elem[0].getBoundingClientRect();
+    return rect.top >= 0;
+  };
 
+  document.addEventListener(
+    "wheel",
+    function(event) {
+      var $currentSlide = $($slides[currentSlide]);
+
+      if (isAnimating) {
+        event.preventDefault();
+        return;
+      }
+
+      var direction = -event.deltaY;
+
+      if (direction < 0) {
+        // next
+        if (currentSlide + 1 >= $slides.length) return;
+        if (!bottomIsReached($currentSlide)) return;
+        event.preventDefault();
+        currentSlide++;
+        var $slide = $($slides[currentSlide]);
+        var offsetTop = $slide.offset().top;
+        isAnimating = true;
+        $("html, body").animate(
+          {
+            scrollTop: offsetTop
+          },
+          1000,
+          stopAnimation
+        );
+      } else {
+        // back
+        if (currentSlide - 1 < 0) return;
+        if (!topIsReached($currentSlide)) return;
+        event.preventDefault();
+        currentSlide--;
+        var $slide = $($slides[currentSlide]);
+        var offsetTop = $slide.offset().top;
+        isAnimating = true;
+        $("html, body").animate(
+          {
+            scrollTop: offsetTop
+          },
+          1000,
+          stopAnimation
+        );
+      }
+    },
+    { passive: false }
+  );
+})(jQuery);
 
 
 // opening //
@@ -43,12 +89,81 @@ gsap.to("#svg_0", {top:40, left:40, duration:1, delay:3.2, scale:0.2});
 gsap.from("#logo", {opacity:0, delay:4.2});
 gsap.to("#svg_0", {delay:4.4, opacity:0});
 
+// main area animations //
+
 gsap.from(".homeArea", {opacity:0, duration:2, delay:4.4});
+gsap.from(".navigation", {opacity:0, duration:2, delay:4.4});
 gsap.to(".LClock", {rotation:360, duration:4, repeat:-1, ease:"linear"});
 gsap.to(".SClock", {rotation:360, duration:48, repeat:-1, ease:"linear"});
 gsap.fromTo(".mouse",{x:70, duration:3}, {x:-70, duration:3, repeat:-1, yoyo: true, ease:"linear"});
-
 $(".yoda").click(function(){
   gsap.to(".arm", {rotation:25, duration:0.15, repeat:-1, yoyo: true, transformOrigin:"bottom"});
 })
 
+// smooth scroll //
+
+$(document).on('click', 'a[href^="#"]', function(smooth) {
+  var id = $(this).attr('href');
+  var $id = $(id);
+  if ($id.length === 0) {
+      return;
+  }
+  smooth.preventDefault();
+  var pos = $id.offset().top;
+  $('body, html').animate({scrollTop: pos});
+});
+
+// side navigation //
+
+$(function() {
+  var controller = new ScrollMagic.Controller();
+
+  new ScrollMagic.Scene({
+      triggerElement: "#section1",
+      duration: 561
+  })
+  .setClassToggle(".navigation a.nav-1", "active")
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#section2",
+    duration: 561
+  })
+  .setClassToggle(".navigation a.nav-2", "active")
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#section3",
+    duration: 561
+  })
+  .setClassToggle(".navigation a.nav-3", "active")
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#section4",
+    duration: 561
+  })
+  .setClassToggle(".navigation a.nav-4", "active")
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#section5",
+    duration: 561
+  })
+  .setClassToggle(".navigation a.nav-5", "active")
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#section6",
+    duration: 561
+  })
+  .setClassToggle(".navigation a.nav-6", "active")
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#section7",
+    duration: 561
+  })
+  .setClassToggle(".navigation a.nav-7", "active")
+  .addTo(controller);
+});
