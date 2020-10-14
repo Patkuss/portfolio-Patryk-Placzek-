@@ -91,7 +91,7 @@ gsap.to("#svg_0", {delay:4.4, opacity:0});
 
 // main area animations //
 
-gsap.from(".homeArea", {opacity:0, duration:2, delay:4.4});
+gsap.from(".section", {opacity:0, duration:2, delay:4.4});
 gsap.from(".navigation", {opacity:0, duration:2, delay:4.4});
 gsap.to(".LClock", {rotation:360, duration:4, repeat:-1, ease:"linear"});
 gsap.to(".SClock", {rotation:360, duration:48, repeat:-1, ease:"linear"});

@@ -1,0 +1,92 @@
+.aboutArea {
+  background: rgb(0,0,0);
+  .aboutAreaLeft {
+    border-left: solid 2px $primary-color1;
+    border-bottom: solid 2px $primary-color1;
+    padding: 0 35px;
+    h2 {
+      color: $primary-color1;
+    }
+    h3 {
+      color: $primary-color3;
+      padding: 15px 0;
+    }
+    p {
+      color: white;
+    }
+  }
+  .aboutAreaLeft::after {
+    content: " ";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: $primary-color1;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+  }
+  .aboutAreaRight {
+    border-left: solid 2px $primary-color1;
+    border-top: solid 2px $primary-color1;
+    border-right: solid 2px $primary-color1;
+    text-align: center;
+    h3 {
+      margin: 20px 0;
+      color: white;
+    }
+    .myPhoto {
+      width: 200px;
+      height: auto;
+      border: solid 2px $primary-color1;
+      padding: 10px;
+      background: black;
+      margin-top: 16px;
+    }
+    .skill-btn {
+      cursor: pointer;
+      height: 55px;
+      width: 55px;
+      color: black;
+      border-radius: 5px;
+      background: white;
+      margin: 5px;
+      transition: 1s;
+      display: inline-flex;
+      img {
+        width: 55px;
+        height: 55px;
+        padding: 5px;
+      }
+      span {
+        font-size: 1px;
+        display: none;
+        transition: 1s;
+        text-align: center;
+        overflow: hidden;
+        color: $primary-color1;
+      }
+    }
+    .skill-btn:hover {
+      width: 155px;
+    }
+    .skill-btn:hover span {
+      display: inline;
+      font-size: 1rem;
+      padding-top: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .aboutAreaRight::after {
+    content: " ";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: $primary-color1;
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+  }
+}

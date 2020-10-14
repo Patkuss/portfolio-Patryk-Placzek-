@@ -1,3 +1,17 @@
+<?php
+
+$to      = 'patryk.placzek@wp.pl';
+$name    = $_POST['name'];
+$email   = $_POST['email'];
+$subject = 'Nowy e-mail od ' . $name . ' (' . $email . ')';
+$message = $_POST['message'];
+$headers = 'From: ' . $name . ' (' . $email . ')';
+$headers .= 'Content-Type: text/html; charset=utf-8';
+
+mail($to, $subject, $message, $headers);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 	<head>
@@ -102,65 +116,6 @@
       </div>
     </section>
     <section class="aboutArea section" id="section2">
-      <div class="container">
-        <div class="row">
-          <div class="col-6 aboutAreaLeft">
-            <h2>Cześć!</h2>
-            <h3>Mam na imię Patryk i...</h3>
-            <p>
-              Jestem młodszym programistą front-end'owym/grafikiem.
-            </p>
-            <p>
-              Głównie działałem jako freelancer dzięki czemu nabyłem komercyjnego doświadczenia w realizacji projektów graficznych oraz stron internetowych (całościowo i komponentowo).
-            </p>
-            <p>
-              Aktualnie poszukuję stałej pracy w której będę rozwijał swoje umiejętności w technologiach webowych.
-            </p>
-            <p>
-              Obecnie swoją naukę oraz docelową ścieżkę kariery wiążę z stanowiskiem FullStack Developera.
-            </p>
-          </div>
-          <div class="col-6 aboutAreaRight">
-            <img src="images/aboutImage.png" class="myPhoto" alt="myPhoto">
-            <h3>W co potrafię?</h3>
-            <div class="skillsList">
-              <div class="skill-btn flex-center" id="html5">
-                <img src="images/icons/html5Icon.png"><span>HTML5</span>
-              </div>
-              <div class="skill-btn flex-center" id="css3">
-                <img src="images/icons/css3Icon.png"><span>CSS3</span>
-              </div>
-              <div class="skill-btn flex-center" id="sass">
-                <img src="images/icons/sassIcon.png"><span>SASS</span>
-              </div>
-              <div class="skill-btn flex-center" id="bootstrap">
-                <img src="images/icons/bootstrapIcon.png"><span>Bootstrap</span>
-              </div>
-              <div class="skill-btn flex-center" id="rwd">
-                <img src="images/icons/rwdIcon.png"><span>RWD</span>
-              </div>
-            </div>
-            <div class="skillsList">
-              <div class="skill-btn flex-center" id="javascript">
-                <img src="images/icons/jsIcon.png"><span>JavaScript</span>
-              </div>
-              <div class="skill-btn flex-center" id="react">
-                <img src="images/icons/reactIcon.png"><span>REACT</span>
-              </div>
-              <div class="skill-btn flex-center" id="git">
-                <img src="images/icons/gitIcon.png"><span>GIT</span>
-              </div>
-              <div class="skill-btn flex-center" id="npm">
-                <img src="images/icons/npmIcon.png"><span>NPM</span>
-              </div>
-              <div class="skill-btn flex-center" id="photoshop">
-                <img src="images/icons/psIcon.png"><span>Photoshop</span>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <section class="akantArea section" id="section3">
 
