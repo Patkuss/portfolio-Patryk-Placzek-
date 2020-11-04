@@ -4,6 +4,7 @@ header {
   z-index: 50;
   background-color: black;
   position: fixed;
+  transition: 0.2s;
   .row {
     margin: 0;
     .logo {
@@ -23,6 +24,7 @@ header {
             margin-left: 30px;
             color: white;
             text-transform: uppercase;
+            transition: 0.5s;
           }
           a:hover {
             color: $primary-color1;
@@ -38,6 +40,7 @@ header {
           display: inline-block;
           a {
             color: white;
+            transition: 0.5s;
           }
           a:hover {
             color: $primary-color1;
@@ -54,5 +57,30 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
+    outline: 3px solid transparent;
+  }
+}
+.greenHeader {
+  background-color: $primary-color1;
+  transition: 0.2s;
+  .row {
+    .menu {
+      ul {
+        li {
+          a:hover {
+            color: black;
+          }
+        }
+      }
+    }
+    .socials {
+      ul {
+        li {
+          a:hover {
+            color: black;
+          }
+        }
+      }
+    }
   }
 }
