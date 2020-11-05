@@ -128,3 +128,47 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .homeArea {
+    .image-wrapper {
+      padding: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      .homeBackground {
+        width: 100%;
+        height: auto;
+        margin-right:auto;
+        margin-left: 0;
+      }
+      .LClock {
+        top: 8.8%;
+        right: 44.429%;
+      }
+      .SClock {
+        top: 8.8%;
+        right: 44.429%;
+      }
+      .yoda {
+        .arm {
+          top: 65%;
+          left: 1%;
+        }
+      }
+      .mouse {
+        top: 80.15%;
+        right: 45.5%;
+      }
+      .steam-container {
+        top: 64%;
+        right: 12%;
+      }
+      .gif {
+        width: 50.29625%;
+        top: 47.28%;
+        right: 21.38%;
+      }
+    }
+  }
+}
