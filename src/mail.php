@@ -17,8 +17,8 @@ mail($to, $subject, $message, $headers);
 	<head>
     <meta charset="UTF-8"/>
     <title>Portfolio Patryk Płaczek</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Portfolio junior web dewelopera Patryka Płaczka z Wrocławia.">
+    <meta name="keywords" content="portfolio, front-ent, frontend, wrocław, strony, www, html, css, bootstrap, javascript, wordpress, rwd, sass">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="icon" type="images/png" href="images/icon.png">
@@ -40,7 +40,7 @@ mail($to, $subject, $message, $headers);
          </g>
        </svg>
     </div>
-    <header class="header">
+    <header class="header" id="header">
       <div class="row">
         <div class="logo col-3" id="logo">
           <img src="images/logo.png" alt="logo">
@@ -61,10 +61,10 @@ mail($to, $subject, $message, $headers);
         <div class="navbar socials col-3">
           <ul>
             <li>
-              <a href=""><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/patryk-p%C5%82aczek-168980162/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </li>
             <li>
-              <a href="">CV</a>
+              <a href="CV_Patryk_Płaczek.pdf" target="_blank">CV</a>
             </li>
           </ul>
         </div>
@@ -116,18 +116,233 @@ mail($to, $subject, $message, $headers);
       </div>
     </section>
     <section class="aboutArea section" id="section2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 aboutAreaLeft">
+            <h2>Cześć!</h2>
+            <h3>Mam na imię Patryk i...</h3>
+            <p>
+              Jestem młodszym programistą front-end'owym/grafikiem.
+            </p>
+            <p>
+              Głównie działałem jako freelancer dzięki czemu nabyłem komercyjnego doświadczenia w realizacji projektów graficznych oraz stron internetowych (całościowo i komponentowo).
+            </p>
+            <p>
+              Aktualnie poszukuję stałej pracy w której będę rozwijał swoje umiejętności w technologiach webowych.
+            </p>
+            <p>
+              Obecnie swoją naukę oraz docelową ścieżkę kariery wiążę z stanowiskiem FullStack Developera.
+            </p>
+          </div>
+          <div class="col-lg-6 aboutAreaRight">
+            <img src="images/aboutImage.png" class="myPhoto" alt="myPhoto">
+            <h3>Stack technologiczny:</h3>
+            <div class="skillsList">
+              <div class="skill-btn flex-center" id="html5">
+                <img src="images/icons/html5Icon.png"><span>HTML5</span>
+              </div>
+              <div class="skill-btn flex-center" id="css3">
+                <img src="images/icons/css3Icon.png"><span>CSS3</span>
+              </div>
+              <div class="skill-btn flex-center" id="sass">
+                <img src="images/icons/sassIcon.png"><span>SASS</span>
+              </div>
+              <div class="skill-btn flex-center" id="bootstrap">
+                <img src="images/icons/bootstrapIcon.png"><span>Bootstrap</span>
+              </div>
+            </div>
+            <div class="skillsList">
+              <div class="skill-btn flex-center" id="rwd">
+                <img src="images/icons/rwdIcon.png"><span>RWD</span>
+              </div>
+              <div class="skill-btn flex-center" id="javascript">
+                <img src="images/icons/jsIcon.png"><span>JavaScript</span>
+              </div>
+              <div class="skill-btn flex-center" id="react">
+                <img src="images/icons/reactIcon.png"><span>REACT</span>
+              </div>
+              <div class="skill-btn flex-center" id="git">
+                <img src="images/icons/gitIcon.png"><span>GIT</span>
+              </div>
+            </div>
+            <div class="skillsList">
+              <div class="skill-btn flex-center" id="npm">
+                <img src="images/icons/npmIcon.png"><span>NPM</span>
+              </div>
+              <div class="skill-btn flex-center" id="photoshop">
+                <img src="images/icons/psIcon.png"><span>Photoshop</span>
+              </div>
+              <div class="skill-btn flex-center" id="wp">
+                <img src="images/icons/wpIcon.png"><span>WordPress</span>
+              </div>
+              <div class="skill-btn flex-center" id="seo">
+                <img src="images/icons/seoIcon.png"><span>SEO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="akantArea section" id="section3">
-
+    <section class="gallimoreArea section workSection" id="section3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 workSectionLeft">
+            <h2>Gallimore</h2>
+            <p class="workSubtitle">Strona wizytówka salonu fryzjerskiego.</p>
+            <div class="workDescription">
+              <h3>Zlecenie:</h3>
+              <p>
+                Projekt komercyjny obejmujący całą identyfikację wizerunkową salonu fryzjerskiego (strona wizytówka, logo oraz projekty materiałów reklamowych).
+                <br>
+                <br>
+                Klientka dostarczyła treści tekstowe oraz kolory na których miałem bazować, a dobór technologii i metodyki była w mojej kwestii.
+                <br>
+                <br>
+                Zlecenie realizowałem od projektu graficznego do wdrożenia na serwer.
+              </p>
+              <h3>Technologie:</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>SASS</li>
+                <li>JavaScript</li>
+                <li>GSAP</li>
+                <li>ScrollMagic</li>
+              </ul>
+              <div class="row buttonsArea">
+                <a href="https://gallimore.pl/" target="_blank"><div class="sectionButton"><i class="fas fa-play"></i></div></a>
+                <a href="https://github.com/Patkuss/Gallimore" target="_blank"><div class="sectionButton"><i class="fab fa-github"></i></div></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 workSectionRight" id="tween1">
+            <img class="desktop" src="images/screens/desktopGallimore.jpg">
+            <img class="tablet" src="images/screens/tabletGallimore.jpg">
+            <img class="phone" src="images/screens/phoneGallimore.jpg">
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="autoKomplexArea section" id="section4">
-
+    <section class="autoKomplexArea section workSection" id="section4">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 workSectionLeft">
+            <h2>Auto Komplex</h2>
+            <p class="workSubtitle">Strona wizytówka warsztatu samochodowego.</p>
+            <div class="workDescription">
+              <h3>Zlecenie:</h3>
+              <p>
+                Projekt komercyjny polegający na utworzeniu strony wizytówki warsztatu samochodowego zwiększając rozpoznawalność przedsiębiorstwa.
+                <br>
+                <br>
+                Klient dostarczył logo oraz zdjęcia które miałem wykorzystać, a dobór kolorystyki, technologii i metodyki była w mojej kwestii.
+                <br>
+                <br>
+                Zlecenie realizowałem od projektu graficznego do wdrożenia na serwer.
+              </p>
+              <h3>Technologie:</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>SASS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="row buttonsArea">
+                <a href="https://auto-komplex.com.pl/" target="_blank"><div class="sectionButton"><i class="fas fa-play"></i></div></a>
+                <a href="https://github.com/Patkuss/auto-komplex" target="_blank"><div class="sectionButton"><i class="fab fa-github"></i></div></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 workSectionRight" id="tween2">
+            <img class="desktop" src="images/screens/desktopAutoKomplex.jpg">
+            <img class="tablet" src="images/screens/tabletAutoKomplex.jpg">
+            <img class="phone" src="images/screens/phoneAutoKomplex.jpg">
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="gallimoreArea section" id="section5">
-
+    <section class="akantArea section workSection" id="section5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 workSectionLeft">
+            <h2>Kwiaciarnia Akant</h2>
+            <p class="workSubtitle">Szablon kwiaciarni online.</p>
+            <div class="workDescription">
+              <h3>Zlecenie:</h3>
+              <p>
+                Projekt komercyjny polegający na utworzeniu szablonu graficznego pod kwiaciarnię online.
+                <br>
+                <br>
+                Moim zadaniem było zrealizowanie frontu projektu według szczegółowych wytycznych klienta (programista PHP). Całą logikę platformy zakupowej miał wdrożyć już klient.
+              </p>
+              <h3>Technologie:</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>SASS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="row buttonsArea">
+                <a href="https://patryk-placzek.pl/akantDemo/index.html" target="_blank"><div class="sectionButton"><i class="fas fa-play"></i></div></a>
+                <a href="https://github.com/Patkuss/flower_shop_akant" target="_blank"><div class="sectionButton"><i class="fab fa-github"></i></div></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 workSectionRight" id="tween3">
+            <img class="desktop" src="images/screens/desktopAkant.jpg">
+            <img class="tablet" src="images/screens/tabletAkant.jpg">
+            <img class="phone" src="images/screens/phoneAkant.jpg">
+          </div>
+        </div>
+      </div>
     </section>
-    <section class=" section" id="section6">
-
+    <section class="portfolioArea section workSection" id="section6">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 workSectionLeft">
+            <h2>Portfolio</h2>
+            <p class="workSubtitle">Zbiór moich prac oraz informacji o mnie.</p>
+            <div class="workDescription">
+              <h3>Zlecenie:</h3>
+              <p>
+                Projekt niekomercyjny mojego portfolio.
+                <br>
+                <br>
+                Klient dostarczył wszystko i nawet sam zrealizował zlecenie.
+                <br>
+                Wspaniały człowiek ;)
+                <br>
+                <br>
+                Realizacja od projektu graficznego do wdrożenia na serwer.
+              </p>
+              <h3>Technologie:</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>SASS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+                <li>GSAP</li>
+                <li>ScrollMagic</li>
+              </ul>
+              <div class="row buttonsArea">
+                <a href="https://patryk-placzek.pl/" target="_blank"><div class="sectionButton"><i class="fas fa-play"></i></div></a>
+                <a href="https://github.com/Patkuss/portfolio-Patryk-Placzek-" target="_blank"><div class="sectionButton"><i class="fab fa-github"></i></div></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 workSectionRight" id="tween4">
+            <img class="desktop" src="images/screens/desktopPortfolio.jpg">
+            <img class="tablet" src="images/screens/tabletPortfolio.jpg">
+            <img class="phone" src="images/screens/phonePortfolio.jpg">
+          </div>
+        </div>
+      </div>
     </section>
     <section class="contactArea section" id="section7">
       <div class="container">
@@ -169,11 +384,10 @@ mail($to, $subject, $message, $headers);
     </section>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js" integrity="sha512-YkmzZl/xoJ+yOJ5YaZ8kBmyQB0jpLQDQpErTSgDsdipDcE1al6Z8TZseXLJLf3it/kRrFRJEpGC2C/jBbIF+Ng==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollToPlugin.min.js" integrity="sha512-qFrVIKAX88m3zoxJzTl97rUnj5oNZkxDiomOwEuehxk+OMCQmJfwMGTWsLEw30VvIV2G2u0kbUcKEnIA9vj4qw==" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
   </body>

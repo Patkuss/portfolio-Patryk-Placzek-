@@ -117,6 +117,10 @@ $(document).on('click', 'a[href^="#"]', function(smooth) {
 
 $(function() {
   var controller = new ScrollMagic.Controller();
+  var fadein_tween1 = TweenMax.from('#tween1', { yPercent:100 , opacity:0.2, display:'none'});
+  var fadein_tween2 = TweenMax.from('#tween2', { yPercent:100 , opacity:0.2, display:'none'});
+  var fadein_tween3 = TweenMax.from('#tween3', { yPercent:100 , opacity:0.2, display:'none'});
+  var fadein_tween4 = TweenMax.from('#tween4', { yPercent:100 , opacity:0.2, display:'none'});
 
   new ScrollMagic.Scene({
     triggerElement: "#section1",
@@ -137,6 +141,7 @@ $(function() {
     duration: 561
   })
   .setClassToggle(".navigation a.nav-3", "active")
+  .setTween(fadein_tween1)
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -144,6 +149,7 @@ $(function() {
     duration: 561
   })
   .setClassToggle(".navigation a.nav-4", "active")
+  .setTween(fadein_tween2)
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -151,6 +157,7 @@ $(function() {
     duration: 561
   })
   .setClassToggle(".navigation a.nav-5", "active")
+  .setTween(fadein_tween3)
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -158,6 +165,7 @@ $(function() {
     duration: 561
   })
   .setClassToggle(".navigation a.nav-6", "active")
+  .setTween(fadein_tween4)
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -187,3 +195,6 @@ $(document).scroll(function() {
     nav.classList.remove("greenHeader");
   };
 });
+
+
+// work sections animations //
